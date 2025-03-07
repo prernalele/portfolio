@@ -1,35 +1,30 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import Project from "./components/Project";
+import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
+    <main className="bg-red-200 h-screen m-0 p-0">
+      <section className="text-xl font-mono font-extrabold">
+        Prerna Lele
+      </section>
+      <section>
+        <h3>About Me</h3>
         <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
+          I am a Frontend developer with 4 years of relevant experience and a
+          decade of overall industry experience. I love turning Figma designs to
+          user friendly , responsive interactive screens for users.
         </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+      </section>
+      <section className="text-lg">
+        Projects
+        <div className="flex flex-row gap-12 justify-center">
+          <Project title="Add to cart" />
+          <Project title="PlatePal" />
+        </div>
+      </section>
+    </main>
+  );
 }
 
-export default App
+export default App;
