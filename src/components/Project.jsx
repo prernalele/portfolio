@@ -1,11 +1,11 @@
 import React from "react";
 
-const Project = ({ title }) => {
+const Project = ({ key, title, image, link }) => {
   return (
     <div>
-      <div> {title}</div>
-      <div></div>
-      <div> </div>
+      <img src={image} />
+      <div>{title}</div>
+      <a href={link}>Project Link </a>
     </div>
   );
 };
