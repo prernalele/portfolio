@@ -2,10 +2,9 @@ import React from "react";
 
 const Project = ({ key, title, image, link }) => {
   return (
-    <div>
+    <div className="flex flex-col justify-around gap-2">
       <img src={image} />
-      <div>{title}</div>
-      <a href={link}>Project Link </a>
+      <a href={link}>{title} </a>
     </div>
   );
 };

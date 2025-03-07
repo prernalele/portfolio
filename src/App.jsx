@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Project from "./components/Project";
+import profilePic from "./assets/zionNationalPark.jpg";
 import PlatePal from "./assets/PlatePal.png";
 import adviceGenerator from "./assets/adviceGenerator.png";
 import WhereInTheWorld from "./assets/WhereInTheWorld.png";
@@ -27,21 +28,23 @@ function App() {
     },
   ];
   return (
-    <main className="bg-red-200 h-screen m-0 p-0">
-      <section className="text-xl font-mono font-extrabold">
+    <main className="bg-red-200 h-screen flex flex-col gap-6 font-mono text-opacity-90">
+      <section className="text-4xl lg:text-2xl font-extrabold">
         Prerna Lele
       </section>
-      <section>
-        <h3>About Me</h3>
-        <p>
-          I am a Frontend developer with 4 years of relevant experience and a
-          decade of overall industry experience. I love turning Figma designs to
-          user friendly , responsive interactive screens for users.
+      <section className="flex flex-col gap-2">
+        <h3 className="text-xl font-bold">About Me</h3>
+        <p className="text-sm">
+          Welcome to my portfolio! I am Prerna Lele, a Frontend developer with 4
+          years of relevant experience and a decade of overall industry
+          experience. I love turning Figma designs to user friendly, responsive
+          interactive screens for users. I have also been a Quality Professional
+          and has led quality efforts in my previous experiences
         </p>
       </section>
-      <section className="text-lg">
-        Projects
-        <div className="flex flex-row gap-12 justify-center">
+      <section className="flex flex-col gap-4">
+        <h3 className="text-xl font-bold">Projects</h3>
+        <div className="flex flex-col lg:flex-row gap-10 justify-center">
           {projectsCollection.map((project) => {
             const { key, title, image, link } = project;
             return (
