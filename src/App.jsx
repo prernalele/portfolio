@@ -4,6 +4,7 @@ import profilePic from "./assets/zionNationalPark.jpg";
 import PlatePal from "./assets/PlatePal.png";
 import adviceGenerator from "./assets/adviceGenerator.png";
 import WhereInTheWorld from "./assets/WhereInTheWorld.png";
+import NewsletterSignup from "./assets/NewsletterSignup.png";
 import "./App.css";
 
 function App() {
@@ -26,9 +27,21 @@ function App() {
       image: WhereInTheWorld,
       link: "https://prernalele.github.io/countries-api-main/",
     },
+    {
+      key: 4,
+      title: "Newsletter sign up",
+      image: NewsletterSignup,
+      link: "https://prernalele.github.io/code-challenge-newsletter-sign-up/",
+    },
+    {
+      key: 5,
+      title: "Grid Lights Game",
+      image: NewsletterSignup,
+      link: "https://prernalele.github.io/countries-api-main/",
+    },
   ];
   return (
-    <main className="bg-red-200 h-screen flex flex-col gap-6 font-mono text-opacity-90">
+    <main className=" max-h-full max-w-full flex flex-col gap-6 font-mono text-opacity-90 justify-center">
       <section className="text-4xl lg:text-2xl font-extrabold">
         Prerna Lele
       </section>
@@ -44,7 +57,7 @@ function App() {
       </section>
       <section className="flex flex-col gap-4">
         <h3 className="text-xl font-bold">Projects</h3>
-        <div className="flex flex-col lg:flex-row gap-10 justify-center">
+        <div className="flex flex-col lg:flex-row gap-10  lg:flex-wrap justify-center items-center">
           {projectsCollection.map((project) => {
             const { key, title, image, link } = project;
             return (
