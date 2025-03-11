@@ -2,14 +2,12 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faGithub,
-  faPersonChalkboard,
-} from "@fortawesome/free-brands-svg-icons";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 
-const Project = ({ key, title, image, link, github }) => {
+const Project = ({ key, title, image, link, githubLink }) => {
   const openGithubRepo = () => {
-    window.open(github);
+    window.open(githubLink);
   };
   const openDemoLink = () => {
     window.open(link);
@@ -22,13 +20,17 @@ const Project = ({ key, title, image, link, github }) => {
           onClick={openGithubRepo}
           className="bg-red-300 hover:bg-red-400 text-black opacity-90 font-bold py-2 px-4 rounded"
         >
-          <FontAwesomeIcon icon={faGithub} />
+          <div>
+            <FontAwesomeIcon icon={faGithub} />
+          </div>
         </button>
         <button
           onClick={openDemoLink}
           class="bg-red-300 hover:bg-red-400  text-black opacity-90 font-bold py-2 px-4 rounded"
         >
-          <FontAwesomeIcon icon={faPersonChalkboard} />
+          <div>
+            <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
+          </div>
         </button>
       </div>
     </div>
