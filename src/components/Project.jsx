@@ -13,15 +13,16 @@ const Project = ({ key, title, image, link, githubLink }) => {
     window.open(link);
   };
   return (
-    <div className="flex flex-col w-1/3 gap-y-2 ">
-      <img src={image} className="rounded-md" />
-      <div className="flex flex-row justify-around">
+    <div className="flex flex-col w-[80%] lg:w-1/3 gap-y-2 gap-x-2">
+      <img src={image} className=" rounded-md" />
+      <div className="flex flex-row justify-between">
         <button
           onClick={openGithubRepo}
           className="bg-red-300 hover:bg-red-400 text-black opacity-90 font-bold py-2 px-4 rounded"
         >
           <div>
             <FontAwesomeIcon icon={faGithub} />
+            <span> Repository </span>
           </div>
         </button>
         <button
@@ -30,6 +31,7 @@ const Project = ({ key, title, image, link, githubLink }) => {
         >
           <div>
             <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
+            <span> Demo </span>
           </div>
         </button>
       </div>

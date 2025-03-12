@@ -1,10 +1,13 @@
 import { useState } from "react";
 import Project from "./components/Project";
-import profilePic from "./assets/zionNationalPark.jpg";
+import profilePic from "./assets/citiesBackground.png";
 import PlatePal from "./assets/PlatePal.png";
 import adviceGenerator from "./assets/adviceGenerator.png";
 import WhereInTheWorld from "./assets/WhereInTheWorld.png";
 import NewsletterSignup from "./assets/NewsletterSignup.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import "./App.css";
 
 function App() {
@@ -46,23 +49,45 @@ function App() {
     // },
   ];
 
+  const openLinkedIn = () => {
+    window.open("https://www.linkedin.com/in/prerna-lele/");
+  };
   return (
     <main className=" max-h-full max-w-full flex flex-col gap-6 font-mono text-opacity-90 justify-center">
-      <section className="text-4xl lg:text-2xl font-extrabold">
-        Prerna Lele
-      </section>
-      <section className="flex flex-col gap-2">
-        <h3 className="text-3xl lg:text-xl font-bold">About Me</h3>
-        <p className="text-sm">
-          Welcome to my portfolio! I am Prerna Lele, a Frontend developer with 4
-          years of relevant experience and a decade of overall industry
-          experience. I love turning Figma designs to user friendly, responsive
-          interactive screens for users. I have also been a Quality Assurance
-          Professional and has led quality efforts in my previous experiences
-        </p>
+      <section className="flex flex-col lg:flex-row items-center justify-center gap-y-4">
+        <div className="ml-10 size-[50%] lg:size-[40%]">
+          <img src={profilePic} className="rounded-md"></img>
+        </div>
+        <section className="flex flex-col">
+          <div className="flex flex-col lg:flex-row lg:justify-between lg:gap-x-6">
+            <h1 className="text-4xl font-extrabold ml-6 ">Prerna Lele</h1>
+            <div className="flex flex-row justify-end lg:justify-around">
+              <div className="mr-4">
+                <FontAwesomeIcon
+                  icon={faLinkedin}
+                  className="size-6"
+                  onClick={openLinkedIn}
+                />
+              </div>
+              <div className="mr-7">
+                <FontAwesomeIcon icon={faEnvelope} className="size-6" />
+                <span> prernalele@gmail.com</span>
+              </div>
+            </div>
+          </div>
+
+          <p className="text-sm m-4 p-2 text-justify">
+            Welcome to my portfolio! I am Prerna Lele, a Frontend developer with
+            4 years of relevant experience and a decade of overall industry
+            experience. I love turning Figma designs to user friendly,
+            responsive interactive screens for users. I have also been a Quality
+            Assurance Professional and has led quality efforts in my previous
+            experiences
+          </p>
+        </section>
       </section>
       <section className="flex flex-col gap-4">
-        <h3 className="text-3xl lg:text-xl font-bold">Projects</h3>
+        <h3 className="text-3xl font-semibold">Projects</h3>
         <div className="flex flex-col lg:flex-row gap-10  lg:flex-wrap justify-center items-center">
           {projectsCollection.map((project) => {
             const { key, title, image, link, githubLink } = project;
