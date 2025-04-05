@@ -7,7 +7,8 @@ import WhereInTheWorld from "./assets/WhereInTheWorld.png";
 import NewsletterSignup from "./assets/NewsletterSignup.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope, faDownload } from "@fortawesome/free-solid-svg-icons";
+import Resume from "./assets/Resume.pdf";
 import "./App.css";
 
 function App() {
@@ -48,10 +49,21 @@ function App() {
     //   link: "https://prernalele.github.io/countries-api-main/",
     // },
   ];
-
+  const [emailCopied, setEmailCopied] = useState(false);
   const openLinkedIn = () => {
     window.open("https://www.linkedin.com/in/prerna-lele/");
   };
+
+  async function copyText() {
+    try {
+      await navigator.clipboard.writeText("prernalele@gmail.com");
+      setEmailCopied(true);
+      setTimeout(() => setEmailCopied(false), 2000);
+    } catch (err) {
+      console.log("failed to copy email", err);
+    }
+  }
+
   return (
     <main className=" max-h-full max-w-full flex flex-col gap-6 font-mono text-opacity-90 justify-center">
       <section className="flex flex-col lg:flex-row items-center justify-center gap-y-4">
@@ -61,17 +73,31 @@ function App() {
         <section className="flex flex-col">
           <div className="flex flex-col lg:flex-row lg:justify-between lg:gap-x-6">
             <h1 className="text-4xl font-extrabold ml-6 ">Prerna Lele</h1>
-            <div className="flex flex-row justify-end lg:justify-around">
-              <div className="mr-4">
+            <div className="flex flex-row lg:justify-around justify-center ">
+              <div className="mr-5 hover:bg-red-400 hover:duration-300 hover:rounded-md hover:px-2 hover:pt-2  ">
                 <FontAwesomeIcon
                   icon={faLinkedin}
-                  className="size-6"
+                  className="size-8"
                   onClick={openLinkedIn}
                 />
               </div>
-              <div className="mr-7">
-                <FontAwesomeIcon icon={faEnvelope} className="size-6" />
-                <span> prernalele@gmail.com</span>
+              <div
+                className="mr-1 hover:bg-red-400 hover:duration-300 hover:rounded-md p-2"
+                onClick={copyText}
+              >
+                <FontAwesomeIcon icon={faEnvelope} className="size-6 mr-2" />
+                <span>{emailCopied ? "Email Copied" : "Email"}</span>
+              </div>
+              <div className="hover:bg-red-400 hover:duration-300 hover:rounded-md p-2">
+                <button className=" ">
+                  <a href={Resume} download="Prerna Lele Resume">
+                    <FontAwesomeIcon
+                      icon={faDownload}
+                      className="pr-2 size-6"
+                    />
+                    Resume
+                  </a>
+                </button>
               </div>
             </div>
           </div>

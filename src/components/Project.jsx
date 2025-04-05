@@ -20,9 +20,14 @@ const Project = ({ key, title, image, link, githubLink }) => {
           onClick={openGithubRepo}
           className="bg-red-300 hover:bg-red-400 text-black opacity-90 font-bold py-2 px-4 rounded"
         >
-          <div>
-            <FontAwesomeIcon icon={faGithub} />
-            <span> Repository </span>
+          <div className="flex flex-row flex-shrink gap-2  justify-center items-center m-2 lg:mx-0">
+            <FontAwesomeIcon
+              icon={faGithub}
+              className="transition duration-300 ease-in-out"
+            />
+            <span className="transition duration-300 ease-in-out hidden md:flex lg:flex ">
+              Repository
+            </span>
           </div>
         </button>
         <button
@@ -31,7 +36,7 @@ const Project = ({ key, title, image, link, githubLink }) => {
         >
           <div>
             <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
-            <span> Demo </span>
+            <span className="hidden md:flex lg:flex"> Demo </span>
           </div>
         </button>
       </div>
