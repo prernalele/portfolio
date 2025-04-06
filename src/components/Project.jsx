@@ -26,7 +26,7 @@ const Project = ({ key, title, image, link, githubLink }) => {
               className="transition duration-300 ease-in-out"
             />
             <span className="transition duration-300 ease-in-out hidden md:flex lg:flex ">
-              Repository
+              Repo
             </span>
           </div>
         </button>
