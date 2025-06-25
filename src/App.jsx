@@ -23,10 +23,9 @@ function App() {
     },
     {
       key: 2,
-      title: "Advice generator",
-      image: adviceGenerator,
-      link: "https://prernalele.github.io/adviceGenerator/",
-      githubLink: "https://github.com/prernalele/adviceGenerator",
+      title: "Add to Cart",
+      image: addToCart,
+      link: "https://github.com/prernalele/add-to-cart",
     },
     {
       key: 3,
@@ -45,9 +44,10 @@ function App() {
     },
     {
       key: 5,
-      title: "Add to Cart",
-      image: addToCart,
-      link: "https://github.com/prernalele/add-to-cart",
+      title: "Advice generator",
+      image: adviceGenerator,
+      link: "https://prernalele.github.io/adviceGenerator/",
+      githubLink: "https://github.com/prernalele/adviceGenerator",
     },
   ];
   const [emailCopied, setEmailCopied] = useState(false);
