@@ -5,6 +5,7 @@ import PlatePal from "./assets/PlatePal.png";
 import adviceGenerator from "./assets/adviceGenerator.png";
 import WhereInTheWorld from "./assets/WhereInTheWorld.png";
 import NewsletterSignup from "./assets/NewsletterSignup.png";
+import addToCart from "./assets/addToCart.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope, faDownload } from "@fortawesome/free-solid-svg-icons";
@@ -42,12 +43,12 @@ function App() {
       githubLink:
         "https://github.com/prernalele/code-challenge-newsletter-sign-up",
     },
-    // {
-    //   key: 5,
-    //   title: "Grid Lights Game",
-    //   image: NewsletterSignup,
-    //   link: "https://prernalele.github.io/countries-api-main/",
-    // },
+    {
+      key: 5,
+      title: "Add to Cart",
+      image: addToCart,
+      link: "https://github.com/prernalele/add-to-cart",
+    },
   ];
   const [emailCopied, setEmailCopied] = useState(false);
   const openLinkedIn = () => {
@@ -74,10 +75,10 @@ function App() {
           <div className="flex flex-col lg:flex-row lg:justify-between lg:gap-x-6">
             <h1 className="text-4xl font-extrabold ml-6 ">Prerna Lele</h1>
             <div className="flex flex-row lg:justify-around justify-center ">
-              <div className="mr-4 pb-0 mt-1 hover:bg-red-400 hover:duration-300 hover:rounded-md hover:p-1 hover:mr-1 ">
+              <div className="ml-2 mr-2 p-2 hover:bg-red-400 hover:duration-300 hover:rounded-md  ">
                 <FontAwesomeIcon
                   icon={faLinkedin}
-                  className="size-7"
+                  className="size-6"
                   onClick={openLinkedIn}
                 />
               </div>
