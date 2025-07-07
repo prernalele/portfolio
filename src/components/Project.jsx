@@ -26,17 +26,17 @@ const Project = ({ key, title, image, link, githubLink }) => {
               className="transition duration-300 ease-in-out"
             />
             <span className="transition duration-300 ease-in-out hidden md:flex lg:flex ">
-              Repo
+              Code
             </span>
           </div>
         </button>
         <button
           onClick={openDemoLink}
-          class="bg-red-300 hover:bg-red-400  text-black opacity-90 font-bold py-2 px-4 rounded"
+          class="bg-red-300 hover:bg-red-400  text-black opacity-90 font-bold py-2 px-4 rounded "
         >
-          <div>
+          <div className="flex flex-row flex-shrink gap-2  justify-center items-center m-2 lg:mx-0">
             <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
-            <span className="hidden md:flex lg:flex"> Demo </span>
+            <span className="hidden md:flex lg:flex"> Site </span>
           </div>
         </button>
       </div>

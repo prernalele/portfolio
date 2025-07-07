@@ -25,7 +25,8 @@ function App() {
       key: 2,
       title: "Add to Cart",
       image: addToCart,
-      link: "https://github.com/prernalele/add-to-cart",
+      link: "https://prernalele.github.io/add-to-cart/",
+      githubLink: "https://github.com/prernalele/add-to-cart",
     },
     {
       key: 3,
